@@ -1,9 +1,12 @@
 import React from "react";
+import ContentRowTop from "../ContentRowTop/ContentRowTop";
+import ContentRowBottom from "../ContentRowBottom/ContentRowBottom";
 
 function Home() {
   return (
     <React.Fragment>
-      <h2>Hola, soy el home</h2>
+      <ContentRowTop />
+      <ContentRowBottom />
     </React.Fragment>
   );
 }
