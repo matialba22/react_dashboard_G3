@@ -1,14 +1,11 @@
-import Prueba from "./components/Prueba";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="App">
       <Header />
 
-      <main>
-        <Prueba />
-      </main>
+      <main></main>
 
       <footer></footer>
     </div>
