@@ -1,9 +1,10 @@
 import Prueba from "./components/Prueba";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <Header />
 
       <main>
         <Prueba />
