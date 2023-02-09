@@ -1,5 +1,7 @@
 .bigCard {
+  margin: 20px;
   height: 400px;
   background: gray;
   width: 300px;
+  border-radius: 0.3em;
 }

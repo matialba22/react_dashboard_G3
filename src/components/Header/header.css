@@ -1,11 +1,13 @@
 .navBar {
   display: flex;
-  margin-bottom: 50px;
   border-bottom: 1px solid lightgray;
+  padding: 20px;
 }
 
 .imagen-logo img {
-  width: 300px;
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
 }
 
 .links {
@@ -26,6 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px;
 }
 
 .links li a {

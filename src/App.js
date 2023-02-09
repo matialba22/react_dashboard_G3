@@ -3,6 +3,8 @@ import Home from "./components/Home/Home";
 import Products from "./components/Products/Products";
 import NotFound from "./components/NotFound/NotFound";
 import { Switch, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         </main>
       </body>
 
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
