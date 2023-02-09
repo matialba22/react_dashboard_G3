@@ -6,9 +6,9 @@ function ContentRowBottom() {
   return (
     <React.Fragment>
       <div className="contenedor-bigCards">
-        <BigCard />
-        <BigCard />
-        <BigCard />
+        <BigCard lastProduct="" />
+        <BigCard lastUser="" />
+        <BigCard categories="" />
       </div>
     </React.Fragment>
   );
