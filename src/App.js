@@ -12,15 +12,14 @@ function App() {
       <header>
         <Header />
       </header>
-      <body>
-        <main>
-          <Switch>
-            <Route exact={true} path="/" component={Home} />
-            <Route path="/products" component={Products} />
-            <Route component={NotFound} />
-          </Switch>
-        </main>
-      </body>
+
+      <main>
+        <Switch>
+          <Route exact={true} path="/" component={Home} />
+          <Route path="/products" component={Products} />
+          <Route component={NotFound} />
+        </Switch>
+      </main>
 
       <footer>
         <Footer />

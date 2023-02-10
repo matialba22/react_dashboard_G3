@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SmallCard from "../SmallCard/SmallCard";
 import "./contentRowTop.css";
-import { useState, useEffect } from "react";
 
 function ContentRowTop() {
   // movies es el estado inicial al cual le estoy asignando un array vacio y setMovies es la funcion para actualizar el estado.
@@ -15,6 +14,7 @@ function ContentRowTop() {
       .then((products) => setProducts(products))
       .catch((error) => console.log(error));
   }, []);
+
   useEffect(() => {
     fetch("http://localhost:3030/api/users")
       .then((response) => response.json())
