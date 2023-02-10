@@ -16,14 +16,7 @@ function Products() {
       <h2 className="productList-title">Listado de productos:</h2>
       <div className="product-container">
         {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            id={product.id}
-            name={product.name}
-            price={product.price}
-            discount={product.discount}
-            finalPrice={product.finalPrice}
-          />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </React.Fragment>
