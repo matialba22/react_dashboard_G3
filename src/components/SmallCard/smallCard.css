@@ -5,7 +5,13 @@
   width: 275px;
   height: 75px;
   border: 1px solid lightgray;
-  color: purple;
   border-radius: 0.3em;
   margin: 20px;
+  transition: all 0.5s ease;
+}
+
+.contenedor-small-data:hover {
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
+    0 12px 40px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(-10px);
 }
