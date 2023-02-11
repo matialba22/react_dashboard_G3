@@ -8,7 +8,9 @@ function Header() {
     <React.Fragment>
       <div className="navBar">
         <div className="imagen-logo">
-          <img src={Logo} alt="LogoWH" />
+          <a href="/">
+            <img src={Logo} alt="LogoWH" />
+          </a>
         </div>
         <div className="links">
           <ul>

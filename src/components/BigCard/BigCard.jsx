@@ -6,7 +6,7 @@ function BigCard(props) {
     <React.Fragment>
       <div className="bigCard">
         {props.countByCategory ? (
-          <React.Fragment>
+          <div>
             <h3>Productos por categoría:</h3>
             <ul>
               {Object.entries(props.countByCategory).map(
@@ -17,11 +17,31 @@ function BigCard(props) {
                 )
               )}
             </ul>
-          </React.Fragment>
+          </div>
         ) : props.lastProduct ? (
-          <h3>Último producto: {props.lastProduct.name}</h3>
+          <div>
+            <h3>Último producto:</h3>
+            <ul>
+              <li>Nombre: {props.lastProduct.name}</li>
+              <li>Tamaño: {props.lastProduct.size}</li>
+              <li>Precio: ${props.lastProduct.price}</li>
+              <li>Descuento: {props.lastProduct.discount}%</li>
+              <li>
+                Precio final:{" $"}
+                {props.lastProduct.price -
+                  (props.lastProduct.price * props.lastProduct.discount) / 100}
+              </li>
+            </ul>
+          </div>
         ) : props.lastUser ? (
-          <h3>Último usuario: {props.lastUser.name}</h3>
+          <div>
+            <h3>Último usuario:</h3>
+            <ul>
+              <li>Nombre: {props.lastUser.name}</li>
+              <li>Apellido: {props.lastUser.lastName}</li>
+              <li>Email: {props.lastUser.email}</li>
+            </ul>
+          </div>
         ) : (
           <h3>No hay información disponible</h3>
         )}
