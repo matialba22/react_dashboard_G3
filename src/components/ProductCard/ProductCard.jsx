@@ -11,12 +11,22 @@ function ProductCard(props) {
           <h3>{product.name}</h3>
         </div>
         <div className="productData">
-          <div className="price discount">
-            <p>Tamaño: {product.size}</p>
-            <p>Precio: ${product.price}</p>
-            <p>Descuento: {product.discount}%</p>
-            <p>
-              Precio final: $
+          <div>
+            <p>Tamaño: </p>
+            <p className="values">{product.size}</p>
+          </div>
+          <div>
+            <p>Precio: </p>
+            <p className="values">${product.price}</p>
+          </div>
+          <div>
+            <p>Descuento: </p>
+            <p className="values">{product.discount}%</p>
+          </div>
+          <div>
+            <p>Precio final: </p>
+            <p className="values">
+              $
               {Math.floor(
                 product.price - (product.price * product.discount) / 100
               )}

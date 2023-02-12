@@ -14,3 +14,28 @@
     0 12px 40px 0 rgba(0, 0, 0, 0.19);
   transform: translateY(-10px);
 }
+
+.ul-info {
+  list-style: none;
+  padding: 0;
+}
+
+.ul-info li {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ul-info li p {
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.bigCard-title {
+  margin: 0 0 20px 0;
+  display: flex;
+  justify-content: center;
+}

@@ -7,12 +7,12 @@ function BigCard(props) {
       <div className="bigCard">
         {props.countByCategory ? (
           <div>
-            <h3>Productos por categoría:</h3>
-            <ul>
+            <h2 className="bigCard-title">Productos por categoría:</h2>
+            <ul className="ul-info">
               {Object.entries(props.countByCategory).map(
                 ([category, count]) => (
                   <li key={category}>
-                    {category}: {count}
+                    {category}: <p>{count}</p>
                   </li>
                 )
               )}
@@ -20,30 +20,54 @@ function BigCard(props) {
           </div>
         ) : props.lastProduct ? (
           <div>
-            <h3>Último producto:</h3>
-            <ul>
-              <li>Nombre: {props.lastProduct.name}</li>
-              <li>Tamaño: {props.lastProduct.size}</li>
-              <li>Precio: ${props.lastProduct.price}</li>
-              <li>Descuento: {props.lastProduct.discount}%</li>
+            <h2 className="bigCard-title">Último producto:</h2>
+            <ul className="ul-info">
               <li>
-                Precio final:{" $"}
-                {props.lastProduct.price -
-                  (props.lastProduct.price * props.lastProduct.discount) / 100}
+                Nombre: <p>{props.lastProduct.name}</p>
+              </li>
+              <li>
+                Tamaño: <p>{props.lastProduct.size}</p>
+              </li>
+              <li>
+                Precio: <p>${props.lastProduct.price}</p>
+              </li>
+              <li>
+                Descuento: <p>{props.lastProduct.discount}%</p>
+              </li>
+              <li>
+                Precio final:{" "}
+                <p>
+                  $
+                  {props.lastProduct.price -
+                    (props.lastProduct.price * props.lastProduct.discount) /
+                      100}
+                </p>
               </li>
             </ul>
           </div>
         ) : props.lastUser ? (
           <div>
-            <h3>Último usuario:</h3>
-            <ul>
-              <li>Nombre: {props.lastUser.name}</li>
-              <li>Apellido: {props.lastUser.lastName}</li>
-              <li>Email: {props.lastUser.email}</li>
+            <h2 className="bigCard-title">Último usuario:</h2>
+            <img src={props.lastUser.image} alt="Imagen del usuario" />
+            <ul className="ul-info">
+              <li>
+                Nombre: <p>{props.lastUser.name}</p>
+              </li>
+              <li>
+                Apellido: <p>{props.lastUser.lastname}</p>
+              </li>
+              {props.lastUser.username ? (
+                <li>
+                  Nombre de usuario: <p>{props.lastUser.username}</p>
+                </li>
+              ) : null}
+              <li>
+                Email: <p>{props.lastUser.email}</p>
+              </li>
             </ul>
           </div>
         ) : (
-          <h3>No hay información disponible</h3>
+          <h2>No hay información disponible</h2>
         )}
       </div>
     </React.Fragment>
