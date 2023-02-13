@@ -48,7 +48,6 @@ function BigCard(props) {
         ) : props.lastUser ? (
           <div>
             <h2 className="bigCard-title">Último usuario:</h2>
-            <img src={props.lastUser.image} alt="Imagen del usuario" />
             <ul className="ul-info">
               <li>
                 Nombre: <p>{props.lastUser.name}</p>

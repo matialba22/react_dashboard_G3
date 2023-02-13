@@ -10,3 +10,7 @@
   flex-wrap: wrap;
   margin: 50px 0;
 }
+
+.welcome h2 {
+  border-bottom: 1px solid #80083f;
+}
